@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
         Printable p = new PrinterProxy("Alice", "Printer");                 
-        System.out.println("Ì¾Á°¤Ï¸½ºß" + p.getPrinterName() + "¤Ç¤¹¡£");
+        System.out.println("åå‰ã¯ç¾åœ¨" + p.getPrinterName() + "ã§ã™ã€‚");
         p.setPrinterName("Bob");
-        System.out.println("Ì¾Á°¤Ï¸½ºß" + p.getPrinterName() + "¤Ç¤¹¡£");
+        System.out.println("åå‰ã¯ç¾åœ¨" + p.getPrinterName() + "ã§ã™ã€‚");
         p.print("Hello, world.");
     }
 }

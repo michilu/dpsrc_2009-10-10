@@ -5,12 +5,12 @@ public class IDCard extends Product {
     private String owner;
     private int serial;
     IDCard(String owner, int serial) {
-        System.out.println(owner + "(" + serial + ")" + "¤Î¥«¡¼¥É¤òºî¤ê¤Ş¤¹¡£");
+        System.out.println(owner + "(" + serial + ")" + "ã®ã‚«ãƒ¼ãƒ‰ã‚’ä½œã‚Šã¾ã™ã€‚");
         this.owner = owner;
         this.serial = serial;
     }
     public void use() {
-        System.out.println(owner + "(" + serial + ")" + "¤Î¥«¡¼¥É¤ò»È¤¤¤Ş¤¹¡£");
+        System.out.println(owner + "(" + serial + ")" + "ã®ã‚«ãƒ¼ãƒ‰ã‚’ä½¿ã„ã¾ã™ã€‚");
     }
     public String getOwner() {
         return owner;

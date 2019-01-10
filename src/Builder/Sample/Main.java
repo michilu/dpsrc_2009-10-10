@@ -15,14 +15,14 @@ public class Main {
             Director director = new Director(htmlbuilder);
             director.construct();
             String filename = htmlbuilder.getResult();
-            System.out.println(filename + "¤¬ºîÀ®¤µ¤ì¤Ş¤·¤¿¡£");
+            System.out.println(filename + "ãŒä½œæˆã•ã‚Œã¾ã—ãŸã€‚");
         } else {
             usage();
             System.exit(0);
         }
     }
     public static void usage() {
-        System.out.println("Usage: java Main plain      ¥×¥ì¡¼¥ó¥Æ¥­¥¹¥È¤ÇÊ¸½ñºîÀ®");
-        System.out.println("Usage: java Main html       HTML¥Õ¥¡¥¤¥ë¤ÇÊ¸½ñºîÀ®");
+        System.out.println("Usage: java Main plain      ãƒ—ãƒ¬ãƒ¼ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã§æ–‡æ›¸ä½œæˆ");
+        System.out.println("Usage: java Main html       HTMLãƒ•ã‚¡ã‚¤ãƒ«ã§æ–‡æ›¸ä½œæˆ");
     }
 }

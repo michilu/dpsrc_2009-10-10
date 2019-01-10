@@ -1,15 +1,15 @@
-public class CharDisplay extends AbstractDisplay {  // CharDisplay¤Ï¡¢AbstractDisplay¤Î¥µ¥Ö¥¯¥é¥¹¡£
-    private char ch;                                // É½¼¨¤¹¤Ù¤­Ê¸»ú¡£
-    public CharDisplay(char ch) {                   // ¥³¥ó¥¹¥È¥é¥¯¥¿¤ÇÅÏ¤µ¤ì¤¿Ê¸»úch¤ò¡¢
-        this.ch = ch;                               // ¥Õ¥£¡¼¥ë¥É¤Ëµ­²±¤·¤Æ¤ª¤¯¡£
+public class CharDisplay extends AbstractDisplay {  // CharDisplayã¯ã€AbstractDisplayã®ã‚µãƒ–ã‚¯ãƒ©ã‚¹ã€‚
+    private char ch;                                // è¡¨ç¤ºã™ã¹ãæ–‡å­—ã€‚
+    public CharDisplay(char ch) {                   // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§æ¸¡ã•ã‚ŒãŸæ–‡å­—chã‚’ã€
+        this.ch = ch;                               // ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«è¨˜æ†¶ã—ã¦ãŠãã€‚
     }
-    public void open() {                            // ¥¹¡¼¥Ñ¡¼¥¯¥é¥¹¤Ç¤ÏÃê¾İ¥á¥½¥Ã¥É¤À¤Ã¤¿¡£¤³¤³¤Ç¥ª¡¼¥Ğ¡¼¥é¥¤¥É¤·¤Æ¼ÂÁõ¡£
-        System.out.print("<<");                     // ³«»ÏÊ¸»úÎó¤È¤·¤Æ"<<"¤òÉ½¼¨¤¹¤ë¡£
+    public void open() {                            // ã‚¹ãƒ¼ãƒ‘ãƒ¼ã‚¯ãƒ©ã‚¹ã§ã¯æŠ½è±¡ãƒ¡ã‚½ãƒƒãƒ‰ã ã£ãŸã€‚ã“ã“ã§ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ã¦å®Ÿè£…ã€‚
+        System.out.print("<<");                     // é–‹å§‹æ–‡å­—åˆ—ã¨ã—ã¦"<<"ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
     }
-    public void print() {                           // print¥á¥½¥Ã¥É¤â¤³¤³¤Ç¼ÂÁõ¤¹¤ë¡£¤³¤ì¤¬display¤«¤é·«¤êÊÖ¤·¤Æ¸Æ¤Ó½Ğ¤µ¤ì¤ë¡£
-        System.out.print(ch);                       // ¥Õ¥£¡¼¥ë¥É¤Ëµ­²±¤·¤Æ¤ª¤¤¤¿Ê¸»ú¤ò1¸ÄÉ½¼¨¤¹¤ë¡£
+    public void print() {                           // printãƒ¡ã‚½ãƒƒãƒ‰ã‚‚ã“ã“ã§å®Ÿè£…ã™ã‚‹ã€‚ã“ã‚ŒãŒdisplayã‹ã‚‰ç¹°ã‚Šè¿”ã—ã¦å‘¼ã³å‡ºã•ã‚Œã‚‹ã€‚
+        System.out.print(ch);                       // ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«è¨˜æ†¶ã—ã¦ãŠã„ãŸæ–‡å­—ã‚’1å€‹è¡¨ç¤ºã™ã‚‹ã€‚
     }
-    public void close() {                           // close¥á¥½¥Ã¥É¤â¤³¤³¤Ç¼ÂÁõ¡£
-        System.out.println(">>");                   // ½ªÎ»Ê¸»úÎó">>"¤òÉ½¼¨¡£
+    public void close() {                           // closeãƒ¡ã‚½ãƒƒãƒ‰ã‚‚ã“ã“ã§å®Ÿè£…ã€‚
+        System.out.println(">>");                   // çµ‚äº†æ–‡å­—åˆ—">>"ã‚’è¡¨ç¤ºã€‚
     }
 }

@@ -3,11 +3,11 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class BigChar {
-    // Ê¸»ú¤ÎÌ¾Á°
+    // æ–‡å­—ã®åå‰
     private char charname;
-    // Âç¤­¤ÊÊ¸»ú¤òÉ½¸½¤¹¤ëÊ¸»úÎó('#' '.' '\n'¤ÎÎó)
+    // å¤§ããªæ–‡å­—ã‚’è¡¨ç¾ã™ã‚‹æ–‡å­—åˆ—('#' '.' '\n'ã®åˆ—)
     private String fontdata;
-    // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
     public BigChar(char charname) {
         this.charname = charname;
         try {
@@ -26,7 +26,7 @@ public class BigChar {
             this.fontdata = charname + "?";
         }
     }
-    // Âç¤­¤ÊÊ¸»ú¤òÉ½¼¨¤¹¤ë
+    // å¤§ããªæ–‡å­—ã‚’è¡¨ç¤ºã™ã‚‹
     public void print() {
         System.out.print(fontdata);
     }

@@ -11,7 +11,7 @@ public class Main extends Frame implements ActionListener {
     private InterpreterFacade facade = new InterpreterFacade(canvas);
     private TextField programTextField = new TextField("program repeat 3 go right go left end end");
 
-    // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
     public Main(String title) {
         super(title);
 
@@ -34,7 +34,7 @@ public class Main extends Frame implements ActionListener {
         show();
     }
 
-    // ActionListenerÍÑ
+    // ActionListenerç”¨
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == programTextField) {
             parseAndExecute();

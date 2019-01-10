@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 
 public class MultiStringDisplay extends Display {
-    private ArrayList body = new ArrayList();             // É½¼¨Ê¸»úÎó
-    private int columns = 0;                        // ºÇÂçÊ¸»ú¿ô
-    public void add(String msg) {                   // Ê¸»úÎóÄÉ²Ã
+    private ArrayList body = new ArrayList();             // è¡¨ç¤ºæ–‡å­—åˆ—
+    private int columns = 0;                        // æœ€å¤§æ–‡å­—æ•°
+    public void add(String msg) {                   // æ–‡å­—åˆ—è¿½åŠ 
         body.add(msg);
         updateColumn(msg);
     }
-    public int getColumns() {                       // Ê¸»ú¿ô
+    public int getColumns() {                       // æ–‡å­—æ•°
         return columns;
     }
-    public int getRows() {                          // ¹Ô¿ô
+    public int getRows() {                          // è¡Œæ•°
         return body.size();
     }
-    public String getRowText(int row) {             // ¹Ô¤ÎÆâÍÆ
+    public String getRowText(int row) {             // è¡Œã®å†…å®¹
         return (String)body.get(row);
     }
-    private void updateColumn(String msg) {         // Ê¸»ú¿ô¤ò¹¹¿·¤¹¤ë
+    private void updateColumn(String msg) {         // æ–‡å­—æ•°ã‚’æ›´æ–°ã™ã‚‹
         if (msg.getBytes().length > columns) {
             columns = msg.getBytes().length;
         }
@@ -27,7 +27,7 @@ public class MultiStringDisplay extends Display {
             }
         }
     }
-    private String spaces(int count) {              // ¶õÇòºîÀ®
+    private String spaces(int count) {              // ç©ºç™½ä½œæˆ
         StringBuffer buf = new StringBuffer();
         for (int i = 0; i < count; i++) {
             buf.append(' ');

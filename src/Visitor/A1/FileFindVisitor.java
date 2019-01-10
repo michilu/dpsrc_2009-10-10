@@ -4,18 +4,18 @@ import java.util.ArrayList;
 public class FileFindVisitor extends Visitor {
     private String filetype;
     private ArrayList found = new ArrayList();
-    public FileFindVisitor(String filetype) {           // ".txt"¤Î¤è¤¦¤Ë³ÈÄ¥»Ò¤ò.ÉÕ¤­¤Ç»ØÄê
+    public FileFindVisitor(String filetype) {           // ".txt"ã®ã‚ˆã†ã«æ‹¡å¼µå­ã‚’.ä»˜ãã§æŒ‡å®š
         this.filetype = filetype;
     }
-    public Iterator getFoundFiles() {                   // ¸«¤Ä¤«¤Ã¤¿¥Õ¥¡¥¤¥ë¤òÆÀ¤ë
+    public Iterator getFoundFiles() {                   // è¦‹ã¤ã‹ã£ãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’å¾—ã‚‹
         return found.iterator();
     }
-    public void visit(File file) {                  // ¥Õ¥¡¥¤¥ë¤òË¬Ìä¤·¤¿¤È¤­¤Ë¸Æ¤Ğ¤ì¤ë
+    public void visit(File file) {                  // ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¨ªå•ã—ãŸã¨ãã«å‘¼ã°ã‚Œã‚‹
         if (file.getName().endsWith(filetype)) {
             found.add(file);
         }
     }
-    public void visit(Directory directory) {   // ¥Ç¥£¥ì¥¯¥È¥ê¤òË¬Ìä¤·¤¿¤È¤­¤Ë¸Æ¤Ğ¤ì¤ë
+    public void visit(Directory directory) {   // ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’è¨ªå•ã—ãŸã¨ãã«å‘¼ã°ã‚Œã‚‹
         Iterator it = directory.iterator();
         while (it.hasNext()) {
             Entry entry = (Entry)it.next();

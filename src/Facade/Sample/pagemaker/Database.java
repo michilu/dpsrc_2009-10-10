@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Database {
-    private Database() {    // new¤Ç¥¤¥ó¥¹¥¿¥ó¥¹À¸À®¤µ¤»¤Ê¤¤¤¿¤á¤ËprivateÀë¸À
+    private Database() {    // newã§ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ç”Ÿæˆã•ã›ãªã„ãŸã‚ã«privateå®£è¨€
     }
-    public static Properties getProperties(String dbname) { // ¥Ç¡¼¥¿¥Ù¡¼¥¹Ì¾¤«¤éProperties¤òÆÀ¤ë
+    public static Properties getProperties(String dbname) { // ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹åã‹ã‚‰Propertiesã‚’å¾—ã‚‹
         String filename = dbname + ".txt";
         Properties prop = new Properties();
         try {

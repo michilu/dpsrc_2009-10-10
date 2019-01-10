@@ -1,9 +1,9 @@
 public class Main {
     private static BigString[] bsarray = new BigString[1000];
     public static void main(String[] args) {
-        System.out.println("¶¦Í­¤·¤¿¾ì¹ç:");
+        System.out.println("å…±æœ‰ã—ãŸå ´åˆ:");
         testAllocation(true);
-        System.out.println("¶¦Í­¤·¤Ê¤¤¾ì¹ç:");
+        System.out.println("å…±æœ‰ã—ãªã„å ´åˆ:");
         testAllocation(false);
     }
     public static void testAllocation(boolean shared) {
@@ -15,6 +15,6 @@ public class Main {
     public static void showMemory() {
         Runtime.getRuntime().gc();
         long used = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-        System.out.println("»ÈÍÑ¥á¥â¥ê = " + used);
+        System.out.println("ä½¿ç”¨ãƒ¡ãƒ¢ãƒª = " + used);
     }
 }

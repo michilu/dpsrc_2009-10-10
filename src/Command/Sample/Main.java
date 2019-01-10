@@ -6,14 +6,14 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Main extends JFrame implements ActionListener, MouseMotionListener, WindowListener {
-    // ÉÁ²èÍúÎò
+    // æç”»å±¥æ­´
     private MacroCommand history = new MacroCommand();
-    // ÉÁ²èÎÎ°è
+    // æç”»é ˜åŸŸ
     private DrawCanvas canvas = new DrawCanvas(400, 400, history);
-    // ¾Ãµî¥Ü¥¿¥ó
+    // æ¶ˆå»ãƒœã‚¿ãƒ³
     private JButton clearButton  = new JButton("clear");
 
-    // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
     public Main(String title) {
         super(title);
 
@@ -32,7 +32,7 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
         show();
     }
 
-    // ActionListenerÍÑ
+    // ActionListenerç”¨
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == clearButton) {
             history.clear();
@@ -40,7 +40,7 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
         }
     }
 
-    // MouseMotionListenerÍÑ
+    // MouseMotionListenerç”¨
     public void mouseMoved(MouseEvent e) {
     }
     public void mouseDragged(MouseEvent e) {
@@ -49,7 +49,7 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
         cmd.execute();
     }
 
-    // WindowListenerÍÑ
+    // WindowListenerç”¨
     public void windowClosing(WindowEvent e) {
         System.exit(0);
     }

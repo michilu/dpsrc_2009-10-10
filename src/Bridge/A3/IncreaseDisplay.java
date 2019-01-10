@@ -1,5 +1,5 @@
 public class IncreaseDisplay extends CountDisplay {
-    private int step; // Áı²Ã¿ô
+    private int step; // å¢—åŠ æ•°
     public IncreaseDisplay(DisplayImpl impl, int step) {
         super(impl);
         this.step = step;

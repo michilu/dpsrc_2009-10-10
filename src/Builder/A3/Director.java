@@ -1,21 +1,21 @@
 public class Director {
     private Builder builder;
-    public Director(Builder builder) {      // Builder¤Î¥µ¥Ö¥¯¥é¥¹¤Î¥¤¥ó¥¹¥¿¥ó¥¹¤¬Í¿¤¨¤é¤ì¤ë¤Î¤Ç¡¢
-        this.builder = builder;             // builder¥Õ¥£¡¼¥ë¥É¤ËÊİ»ı¤·¤Æ¤ª¤¯¡£
+    public Director(Builder builder) {      // Builderã®ã‚µãƒ–ã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒä¸ãˆã‚‰ã‚Œã‚‹ã®ã§ã€
+        this.builder = builder;             // builderãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«ä¿æŒã—ã¦ãŠãã€‚
     }
-    public void construct() {             // Ê¸½ñ¹½ÃÛ
-        builder.makeTitle("Greeting");              // ¥¿¥¤¥È¥ë
-        builder.makeString("Ä«¤«¤éÃë¤Ë¤«¤±¤Æ");     // Ê¸»úÎó
-        builder.makeItems(new String[]{             // ²Õ¾ò½ñ¤­
-            "¤ª¤Ï¤è¤¦¤´¤¶¤¤¤Ş¤¹¡£",
-            "¤³¤ó¤Ë¤Á¤Ï¡£",
+    public void construct() {             // æ–‡æ›¸æ§‹ç¯‰
+        builder.makeTitle("Greeting");              // ã‚¿ã‚¤ãƒˆãƒ«
+        builder.makeString("æœã‹ã‚‰æ˜¼ã«ã‹ã‘ã¦");     // æ–‡å­—åˆ—
+        builder.makeItems(new String[]{             // ç®‡æ¡æ›¸ã
+            "ãŠã¯ã‚ˆã†ã”ã–ã„ã¾ã™ã€‚",
+            "ã“ã‚“ã«ã¡ã¯ã€‚",
         });
-        builder.makeString("Ìë¤Ë");                 // ÊÌ¤ÎÊ¸»úÎó
-        builder.makeItems(new String[]{             // ÊÌ¤Î²Õ¾ò½ñ¤­
-            "¤³¤ó¤Ğ¤ó¤Ï¡£",
-            "¤ª¤ä¤¹¤ß¤Ê¤µ¤¤¡£",
-            "¤µ¤è¤¦¤Ê¤é¡£",
+        builder.makeString("å¤œã«");                 // åˆ¥ã®æ–‡å­—åˆ—
+        builder.makeItems(new String[]{             // åˆ¥ã®ç®‡æ¡æ›¸ã
+            "ã“ã‚“ã°ã‚“ã¯ã€‚",
+            "ãŠã‚„ã™ã¿ãªã•ã„ã€‚",
+            "ã•ã‚ˆã†ãªã‚‰ã€‚",
         });
-        builder.close();                 // Ê¸½ñ¤ò´°À®¤µ¤»¤ë
+        builder.close();                 // æ–‡æ›¸ã‚’å®Œæˆã•ã›ã‚‹
     }
 }

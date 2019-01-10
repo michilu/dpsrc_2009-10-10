@@ -6,9 +6,9 @@ public class Main {
             System.exit(0);
         }
         BigString bs;
-        bs = new BigString(args[0], false);     // ¶¦Í­¤·¤Ê¤¤
+        bs = new BigString(args[0], false);     // å…±æœ‰ã—ãªã„
         bs.print();
-        bs = new BigString(args[0], true);      // ¶¦Í­¤¹¤ë
+        bs = new BigString(args[0], true);      // å…±æœ‰ã™ã‚‹
         bs.print();
     }
 }

@@ -1,22 +1,22 @@
 import java.util.HashMap;
 
 public class BigCharFactory {
-    // ¤¹¤Ç¤Ëºî¤Ã¤¿BigChar¤Î¥¤¥ó¥¹¥¿¥ó¥¹¤ò´ÉÍı
+    // ã™ã§ã«ä½œã£ãŸBigCharã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ç®¡ç†
     private HashMap pool = new HashMap();
-    // Singleton¥Ñ¥¿¡¼¥ó
+    // Singletonãƒ‘ã‚¿ãƒ¼ãƒ³
     private static BigCharFactory singleton = new BigCharFactory();
-    // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
     private BigCharFactory() {
     }
-    // Í£°ì¤Î¥¤¥ó¥¹¥¿¥ó¥¹¤òÆÀ¤ë
+    // å”¯ä¸€ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’å¾—ã‚‹
     public static BigCharFactory getInstance() {
         return singleton;
     }
-    // BigChar¤Î¥¤¥ó¥¹¥¿¥ó¥¹À¸À®(¶¦Í­)
+    // BigCharã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ç”Ÿæˆ(å…±æœ‰)
     public synchronized BigChar getBigChar(char charname) {
         BigChar bc = (BigChar)pool.get("" + charname);
         if (bc == null) {
-            bc = new BigChar(charname); // ¤³¤³¤ÇBigChar¤Î¥¤¥ó¥¹¥¿¥ó¥¹¤òÀ¸À®
+            bc = new BigChar(charname); // ã“ã“ã§BigCharã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ç”Ÿæˆ
             pool.put("" + charname, bc);
         }
         return bc;

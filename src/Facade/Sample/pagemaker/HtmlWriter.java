@@ -5,10 +5,10 @@ import java.io.IOException;
 
 public class HtmlWriter {
     private Writer writer;
-    public HtmlWriter(Writer writer) {  // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    public HtmlWriter(Writer writer) {  // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
         this.writer = writer;
     }
-    public void title(String title) throws IOException {    // ¥¿¥¤¥È¥ë¤Î½ĞÎÏ
+    public void title(String title) throws IOException {    // ã‚¿ã‚¤ãƒˆãƒ«ã®å‡ºåŠ›
         writer.write("<html>");
         writer.write("<head>");
         writer.write("<title>" + title + "</title>");
@@ -16,16 +16,16 @@ public class HtmlWriter {
         writer.write("<body>\n");
         writer.write("<h1>" + title + "</h1>\n");
     }
-    public void paragraph(String msg) throws IOException {  // ÃÊÍî¤Î½ĞÎÏ
+    public void paragraph(String msg) throws IOException {  // æ®µè½ã®å‡ºåŠ›
         writer.write("<p>" + msg + "</p>\n");
     }
-    public void link(String href, String caption) throws IOException {  // ¥ê¥ó¥¯¤Î½ĞÎÏ
+    public void link(String href, String caption) throws IOException {  // ãƒªãƒ³ã‚¯ã®å‡ºåŠ›
         paragraph("<a href=\"" + href + "\">" + caption + "</a>");
     }
-    public void mailto(String mailaddr, String username) throws IOException {   // ¥á¡¼¥ë¥¢¥É¥ì¥¹¤Î½ĞÎÏ
+    public void mailto(String mailaddr, String username) throws IOException {   // ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã®å‡ºåŠ›
         link("mailto:" + mailaddr, username);
     }
-    public void close() throws IOException {    // ÊÄ¤¸¤ë
+    public void close() throws IOException {    // é–‰ã˜ã‚‹
         writer.write("</body>");
         writer.write("</html>\n");
         writer.close();

@@ -3,7 +3,7 @@ import java.io.*;
 public class FileDisplayImpl extends DisplayImpl {
     private String filename;
     private BufferedReader reader;
-    private final int MAX_READAHEAD_LIMIT = 4096;   // ·«¤êÊÖ¤·É½¼¨¤µ¤»¤é¤ì¤ë¾å¸Â¡Ê¥Ð¥Ã¥Õ¥¡¥µ¥¤¥º¡Ë
+    private final int MAX_READAHEAD_LIMIT = 4096;   // ç¹°ã‚Šè¿”ã—è¡¨ç¤ºã•ã›ã‚‰ã‚Œã‚‹ä¸Šé™ï¼ˆãƒãƒƒãƒ•ã‚¡ã‚µã‚¤ã‚ºï¼‰
     public FileDisplayImpl(String filename) {
         this.filename = filename;
     }
@@ -14,12 +14,12 @@ public class FileDisplayImpl extends DisplayImpl {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("=-=-=-=-=-= " + filename + " =-=-=-=-=-="); // ¾þ¤êÏÈ
+        System.out.println("=-=-=-=-=-= " + filename + " =-=-=-=-=-="); // é£¾ã‚Šæž 
     }
     public void rawPrint() {
         try {
             String line;
-            reader.reset(); // mark¤·¤¿°ÌÃÖ¤Þ¤Ç´¬¤­Ìá¤¹
+            reader.reset(); // markã—ãŸä½ç½®ã¾ã§å·»ãæˆ»ã™
             while ((line = reader.readLine()) != null) {
                 System.out.println("> " + line);
             }
@@ -28,7 +28,7 @@ public class FileDisplayImpl extends DisplayImpl {
         }
     }
     public void rawClose() {
-        System.out.println("=-=-=-=-=-= "); // ¾þ¤êÏÈ
+        System.out.println("=-=-=-=-=-= "); // é£¾ã‚Šæž 
         try {
             reader.close();
         } catch (IOException e) {

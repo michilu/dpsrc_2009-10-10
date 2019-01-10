@@ -1,13 +1,13 @@
 public class IncrementalNumberGenerator extends NumberGenerator {
-    private int number;                     // ¸½ºß¤Î¿ô
-    private int end;                        // ½ªÎ»ÃÍ(¤³¤ÎÃÍ¤ò´Ş¤Ş¤Ê¤¤)
-    private int inc;                        // Áı²ÃÊ¬
+    private int number;                     // ç¾åœ¨ã®æ•°
+    private int end;                        // çµ‚äº†å€¤(ã“ã®å€¤ã‚’å«ã¾ãªã„)
+    private int inc;                        // å¢—åŠ åˆ†
     public IncrementalNumberGenerator(int start, int end, int inc) {
         this.number = start;
         this.end = end;
         this.inc = inc;
     }
-    public int getNumber() {                // ¿ô¤ò¼èÆÀ¤¹¤ë
+    public int getNumber() {                // æ•°ã‚’å–å¾—ã™ã‚‹
         return number;
     }
     public void execute() {

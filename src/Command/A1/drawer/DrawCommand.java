@@ -4,16 +4,16 @@ import command.Command;
 import java.awt.Point;
 
 public class DrawCommand implements Command {
-    // ÉÁ²èÂĞ¾İ
+    // æç”»å¯¾è±¡
     protected Drawable drawable;
-    // ÉÁ²è°ÌÃÖ
+    // æç”»ä½ç½®
     private Point position;
-    // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
     public DrawCommand(Drawable drawable, Point position) {
         this.drawable = drawable;
         this.position = position;
     }
-    // ¼Â¹Ô
+    // å®Ÿè¡Œ
     public void execute() {
         drawable.draw(position.x, position.y);
     }

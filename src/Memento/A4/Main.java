@@ -5,34 +5,34 @@ import java.io.*;
 public class Main {
     public static final String SAVEFILENAME = "game.dat";       
     public static void main(String[] args) {
-        Gamer gamer = new Gamer(100);               // ºÇ½é¤Î½ê»ı¶â¤Ï100
-        Memento memento = loadMemento();            // ¥Õ¥¡¥¤¥ë¤«¤é¥í¡¼¥É   
+        Gamer gamer = new Gamer(100);               // æœ€åˆã®æ‰€æŒé‡‘ã¯100
+        Memento memento = loadMemento();            // ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ãƒ­ãƒ¼ãƒ‰   
         if (memento != null) {
-            System.out.println("Á°²óÊİÂ¸¤·¤¿·ë²Ì¤«¤é¥¹¥¿¡¼¥È¤·¤Ş¤¹¡£");
+            System.out.println("å‰å›ä¿å­˜ã—ãŸçµæœã‹ã‚‰ã‚¹ã‚¿ãƒ¼ãƒˆã—ã¾ã™ã€‚");
             gamer.restoreMemento(memento);
         } else {
-            System.out.println("¿·µ¬¤Ë¥¹¥¿¡¼¥È¤·¤Ş¤¹¡£");
+            System.out.println("æ–°è¦ã«ã‚¹ã‚¿ãƒ¼ãƒˆã—ã¾ã™ã€‚");
             memento = gamer.createMemento();
         }
         for (int i = 0; i < 100; i++) {
-            System.out.println("==== " + i);        // ²ó¿ôÉ½¼¨
-            System.out.println("¸½¾õ:" + gamer);    // ¸½ºß¤Î¼ç¿Í¸ø¤Î¾õÂÖÉ½¼¨
+            System.out.println("==== " + i);        // å›æ•°è¡¨ç¤º
+            System.out.println("ç¾çŠ¶:" + gamer);    // ç¾åœ¨ã®ä¸»äººå…¬ã®çŠ¶æ…‹è¡¨ç¤º
 
-            gamer.bet();    // ¥²¡¼¥à¤ò¿Ê¤á¤ë
+            gamer.bet();    // ã‚²ãƒ¼ãƒ ã‚’é€²ã‚ã‚‹
 
-            System.out.println("½ê»ı¶â¤Ï" + gamer.getMoney() + "±ß¤Ë¤Ê¤ê¤Ş¤·¤¿¡£");
+            System.out.println("æ‰€æŒé‡‘ã¯" + gamer.getMoney() + "å††ã«ãªã‚Šã¾ã—ãŸã€‚");
 
-            // Memento¤Î¼è¤ê°·¤¤¤Î·èÄê
+            // Mementoã®å–ã‚Šæ‰±ã„ã®æ±ºå®š
             if (gamer.getMoney() > memento.getMoney()) {
-                System.out.println("    ¡Ê¤À¤¤¤ÖÁı¤¨¤¿¤Î¤Ç¡¢¸½ºß¤Î¾õÂÖ¤òÊİÂ¸¤·¤Æ¤ª¤³¤¦¡Ë");
+                System.out.println("    ï¼ˆã ã„ã¶å¢—ãˆãŸã®ã§ã€ç¾åœ¨ã®çŠ¶æ…‹ã‚’ä¿å­˜ã—ã¦ãŠã“ã†ï¼‰");
                 memento = gamer.createMemento();
-                saveMemento(memento);   // ¥Õ¥¡¥¤¥ë¤ËÊİÂ¸   
+                saveMemento(memento);   // ãƒ•ã‚¡ã‚¤ãƒ«ã«ä¿å­˜   
             } else if (gamer.getMoney() < memento.getMoney() / 2) {
-                System.out.println("    ¡Ê¤À¤¤¤Ö¸º¤Ã¤¿¤Î¤Ç¡¢°ÊÁ°¤Î¾õÂÖ¤ËÉüµ¢¤·¤è¤¦¡Ë");
+                System.out.println("    ï¼ˆã ã„ã¶æ¸›ã£ãŸã®ã§ã€ä»¥å‰ã®çŠ¶æ…‹ã«å¾©å¸°ã—ã‚ˆã†ï¼‰");
                 gamer.restoreMemento(memento);
             }
 
-            // »ş´ÖÂÔ¤Á
+            // æ™‚é–“å¾…ã¡
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

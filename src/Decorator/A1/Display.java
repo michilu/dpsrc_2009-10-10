@@ -1,8 +1,8 @@
 public abstract class Display {
-    public abstract int getColumns();               // ²£¤ÎÊ¸»ú¿ô¤òÆÀ¤ë
-    public abstract int getRows();                  // ½Ä¤Î¹Ô¿ô¤òÆÀ¤ë
-    public abstract String getRowText(int row);     // rowÈÖÌÜ¤ÎÊ¸»úÎó¤òÆÀ¤ë
-    public void show() {                            // Á´ÉôÉ½¼¨¤¹¤ë
+    public abstract int getColumns();               // æ¨ªã®æ–‡å­—æ•°ã‚’å¾—ã‚‹
+    public abstract int getRows();                  // ç¸¦ã®è¡Œæ•°ã‚’å¾—ã‚‹
+    public abstract String getRowText(int row);     // rowç•ªç›®ã®æ–‡å­—åˆ—ã‚’å¾—ã‚‹
+    public void show() {                            // å…¨éƒ¨è¡¨ç¤ºã™ã‚‹
         for (int i = 0; i < getRows(); i++) {
             System.out.println(getRowText(i));
         }

@@ -5,10 +5,10 @@ public class ColleagueButton extends Button implements Colleague {
     public ColleagueButton(String caption) {
         super(caption);
     }
-    public void setMediator(Mediator mediator) {            // Mediator¤òÊİ»ı
+    public void setMediator(Mediator mediator) {            // Mediatorã‚’ä¿æŒ
         this.mediator = mediator;
     }
-    public void setColleagueEnabled(boolean enabled) {      // Mediator¤«¤éÍ­¸ú/Ìµ¸ú¤¬»Ø¼¨¤µ¤ì¤ë
+    public void setColleagueEnabled(boolean enabled) {      // Mediatorã‹ã‚‰æœ‰åŠ¹/ç„¡åŠ¹ãŒæŒ‡ç¤ºã•ã‚Œã‚‹
         setEnabled(enabled);
     }
 }

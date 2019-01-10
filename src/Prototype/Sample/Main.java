@@ -2,7 +2,7 @@ import framework.*;
 
 public class Main {
     public static void main(String[] args) {
-        // ½àÈ÷
+        // æº–å‚™
         Manager manager = new Manager();
         UnderlinePen upen = new UnderlinePen('~');
         MessageBox mbox = new MessageBox('*');
@@ -11,7 +11,7 @@ public class Main {
         manager.register("warning box", mbox);
         manager.register("slash box", sbox);
 
-        // À¸À®
+        // ç”Ÿæˆ
         Product p1 = manager.create("strong message");
         p1.use("Hello, world.");
         Product p2 = manager.create("warning box");

@@ -2,56 +2,56 @@ package game;
 import java.util.*;
 
 public class Gamer {
-    private int money;                          // ½ê»ı¶â
-    private List fruits = new ArrayList(); // ¥Õ¥ë¡¼¥Ä
-    private Random random = new Random();       // Íğ¿ôÈ¯À¸´ï
-    private static String[] fruitsname = {      // ¥Õ¥ë¡¼¥ÄÌ¾¤ÎÉ½
-        "¥ê¥ó¥´", "¤Ö¤É¤¦", "¥Ğ¥Ê¥Ê", "¤ß¤«¤ó",
+    private int money;                          // æ‰€æŒé‡‘
+    private List fruits = new ArrayList(); // ãƒ•ãƒ«ãƒ¼ãƒ„
+    private Random random = new Random();       // ä¹±æ•°ç™ºç”Ÿå™¨
+    private static String[] fruitsname = {      // ãƒ•ãƒ«ãƒ¼ãƒ„åã®è¡¨
+        "ãƒªãƒ³ã‚´", "ã¶ã©ã†", "ãƒãƒŠãƒŠ", "ã¿ã‹ã‚“",
     };
-    public Gamer(int money) {                   // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    public Gamer(int money) {                   // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
         this.money = money;
     }
-    public int getMoney() {                     // ¸½ºß¤Î½ê»ı¶â¤òÆÀ¤ë
+    public int getMoney() {                     // ç¾åœ¨ã®æ‰€æŒé‡‘ã‚’å¾—ã‚‹
         return money;
     }
-    public void bet() {                         // ÅÒ¤±¤ë¡Ä¥²¡¼¥à¤Î¿Ê¹Ô
-        int dice = random.nextInt(6) + 1;           // ¥µ¥¤¥³¥í¤ò¿¶¤ë
-        if (dice == 1) {                            // 1¤ÎÌÜ¡Ä½ê»ı¶â¤¬Áı¤¨¤ë
+    public void bet() {                         // è³­ã‘ã‚‹â€¦ã‚²ãƒ¼ãƒ ã®é€²è¡Œ
+        int dice = random.nextInt(6) + 1;           // ã‚µã‚¤ã‚³ãƒ­ã‚’æŒ¯ã‚‹
+        if (dice == 1) {                            // 1ã®ç›®â€¦æ‰€æŒé‡‘ãŒå¢—ãˆã‚‹
             money += 100;
-            System.out.println("½ê»ı¶â¤¬Áı¤¨¤Ş¤·¤¿¡£");
-        } else if (dice == 2) {                     // 2¤ÎÌÜ¡Ä½ê»ı¶â¤¬È¾Ê¬¤Ë¤Ê¤ë
+            System.out.println("æ‰€æŒé‡‘ãŒå¢—ãˆã¾ã—ãŸã€‚");
+        } else if (dice == 2) {                     // 2ã®ç›®â€¦æ‰€æŒé‡‘ãŒåŠåˆ†ã«ãªã‚‹
             money /= 2;
-            System.out.println("½ê»ı¶â¤¬È¾Ê¬¤Ë¤Ê¤ê¤Ş¤·¤¿¡£");
-        } else if (dice == 6) {                     // 6¤ÎÌÜ¡Ä¥Õ¥ë¡¼¥Ä¤ò¤â¤é¤¦
+            System.out.println("æ‰€æŒé‡‘ãŒåŠåˆ†ã«ãªã‚Šã¾ã—ãŸã€‚");
+        } else if (dice == 6) {                     // 6ã®ç›®â€¦ãƒ•ãƒ«ãƒ¼ãƒ„ã‚’ã‚‚ã‚‰ã†
             String f = getFruit();
-            System.out.println("¥Õ¥ë¡¼¥Ä(" + f + ")¤ò¤â¤é¤¤¤Ş¤·¤¿¡£");
+            System.out.println("ãƒ•ãƒ«ãƒ¼ãƒ„(" + f + ")ã‚’ã‚‚ã‚‰ã„ã¾ã—ãŸã€‚");
             fruits.add(f);
-        } else {                                    // ¤½¤ì°Ê³°¡Ä²¿¤âµ¯¤­¤Ê¤¤
-            System.out.println("²¿¤âµ¯¤³¤ê¤Ş¤»¤ó¤Ç¤·¤¿¡£");
+        } else {                                    // ãã‚Œä»¥å¤–â€¦ä½•ã‚‚èµ·ããªã„
+            System.out.println("ä½•ã‚‚èµ·ã“ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚");
         }
     }
-    public Memento createMemento() {                // ¥¹¥Ê¥Ã¥×¥·¥ç¥Ã¥È¤ò¤È¤ë
+    public Memento createMemento() {                // ã‚¹ãƒŠãƒƒãƒ—ã‚·ãƒ§ãƒƒãƒˆã‚’ã¨ã‚‹
         Memento m = new Memento(money);
         Iterator it = fruits.iterator();
         while (it.hasNext()) {
             String f = (String)it.next();
-            if (f.startsWith("¤ª¤¤¤·¤¤")) {         // ¥Õ¥ë¡¼¥Ä¤Ï¤ª¤¤¤·¤¤¤â¤Î¤À¤±ÊİÂ¸
+            if (f.startsWith("ãŠã„ã—ã„")) {         // ãƒ•ãƒ«ãƒ¼ãƒ„ã¯ãŠã„ã—ã„ã‚‚ã®ã ã‘ä¿å­˜
                 m.addFruit(f);
             }
         }
         return m;
     }
-    public void restoreMemento(Memento memento) {   // ¥¢¥ó¥É¥¥¤ò¹Ô¤¦
+    public void restoreMemento(Memento memento) {   // ã‚¢ãƒ³ãƒ‰ã‚¥ã‚’è¡Œã†
         this.money = memento.money;
         this.fruits = memento.getFruits();
     }
-    public String toString() {                      // Ê¸»úÎóÉ½¸½
+    public String toString() {                      // æ–‡å­—åˆ—è¡¨ç¾
         return "[money = " + money + ", fruits = " + fruits + "]";
     }
-    private String getFruit() {                     // ¥Õ¥ë¡¼¥Ä¤ò1¸ÄÆÀ¤ë
+    private String getFruit() {                     // ãƒ•ãƒ«ãƒ¼ãƒ„ã‚’1å€‹å¾—ã‚‹
         String prefix = "";
         if (random.nextBoolean()) {
-            prefix = "¤ª¤¤¤·¤¤";
+            prefix = "ãŠã„ã—ã„";
         }
         return prefix + fruitsname[random.nextInt(fruitsname.length)];
     }

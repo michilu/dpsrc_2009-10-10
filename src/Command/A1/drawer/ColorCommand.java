@@ -4,16 +4,16 @@ import command.Command;
 import java.awt.Color;
 
 public class ColorCommand implements Command {
-    // ÉÁ²èÂĞ¾İ
+    // æç”»å¯¾è±¡
     protected Drawable drawable;
-    // ÉÁ²è¿§
+    // æç”»è‰²
     private Color color;
-    // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
     public ColorCommand(Drawable drawable, Color color) {
         this.drawable = drawable;
         this.color = color;
     }
-    // ¼Â¹Ô
+    // å®Ÿè¡Œ
     public void execute() {
         drawable.setColor(color);
     }

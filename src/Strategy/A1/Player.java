@@ -4,24 +4,24 @@ public class Player {
     private int wincount;
     private int losecount;
     private int gamecount;
-    public Player(String name, Strategy strategy) {         // Ì¾Á°¤ÈÀïÎ¬¤ò¼ø¤±¤é¤ì¤ë
+    public Player(String name, Strategy strategy) {         // åå‰ã¨æˆ¦ç•¥ã‚’æˆã‘ã‚‰ã‚Œã‚‹
         this.name = name;
         this.strategy = strategy;
     }
-    public Hand nextHand() {                                // ÀïÎ¬¤Ë¤ª¤¦¤«¤¬¤¤¤òÎ©¤Æ¤ë
+    public Hand nextHand() {                                // æˆ¦ç•¥ã«ãŠã†ã‹ãŒã„ã‚’ç«‹ã¦ã‚‹
         return strategy.nextHand();
     }
-    public void win() {                 // ¾¡¤Ã¤¿
+    public void win() {                 // å‹ã£ãŸ
         strategy.study(true);
         wincount++;
         gamecount++;
     }
-    public void lose() {                // Éé¤±¤¿
+    public void lose() {                // è² ã‘ãŸ
         strategy.study(false);
         losecount++;
         gamecount++;
     }
-    public void even() {                // °ú¤­Ê¬¤±
+    public void even() {                // å¼•ãåˆ†ã‘
         gamecount++;
     }
     public String toString() {

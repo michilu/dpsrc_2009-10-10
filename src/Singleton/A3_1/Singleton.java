@@ -1,7 +1,7 @@
 public class Singleton {
     private static Singleton singleton = null;
     private Singleton() {
-        System.out.println("¥¤¥ó¥¹¥¿¥ó¥¹¤òÀ¸À®¤·¤Ş¤·¤¿¡£");
+        System.out.println("ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ç”Ÿæˆã—ã¾ã—ãŸã€‚");
         slowdown();                             
     }
     public static Singleton getInstance() {

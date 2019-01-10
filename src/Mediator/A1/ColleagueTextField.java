@@ -5,17 +5,17 @@ import java.awt.event.TextEvent;
 
 public class ColleagueTextField extends TextField implements TextListener, Colleague {
     private Mediator mediator;
-    public ColleagueTextField(String text, int columns) {   // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    public ColleagueTextField(String text, int columns) {   // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
         super(text, columns);
     }
-    public void setMediator(Mediator mediator) {            // Mediator¤òÊİ»ı
+    public void setMediator(Mediator mediator) {            // Mediatorã‚’ä¿æŒ
         this.mediator = mediator;
     }
-    public void setColleagueEnabled(boolean enabled) {      // Mediator¤«¤éÍ­¸ú/Ìµ¸ú¤¬»Ø¼¨¤µ¤ì¤ë
+    public void setColleagueEnabled(boolean enabled) {      // Mediatorã‹ã‚‰æœ‰åŠ¹/ç„¡åŠ¹ãŒæŒ‡ç¤ºã•ã‚Œã‚‹
         setEnabled(enabled);
         setBackground(enabled ? Color.white : Color.lightGray);
     }
-    public void textValueChanged(TextEvent e) {             // Ê¸»úÎó¤¬ÊÑ²½¤·¤¿¤éMediator¤ËÄÌÃÎ
+    public void textValueChanged(TextEvent e) {             // æ–‡å­—åˆ—ãŒå¤‰åŒ–ã—ãŸã‚‰Mediatorã«é€šçŸ¥
         mediator.colleagueChanged();
     }
 }

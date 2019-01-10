@@ -1,16 +1,16 @@
 public class SideBorder extends Border {
-    private char borderChar;                        // ¾ş¤ê¤È¤Ê¤ëÊ¸»ú
-    public SideBorder(Display display, char ch) {   // ¥³¥ó¥¹¥È¥é¥¯¥¿¤ÇDisplay¤È¾ş¤êÊ¸»ú¤ò»ØÄê
+    private char borderChar;                        // é£¾ã‚Šã¨ãªã‚‹æ–‡å­—
+    public SideBorder(Display display, char ch) {   // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§Displayã¨é£¾ã‚Šæ–‡å­—ã‚’æŒ‡å®š
         super(display);
         this.borderChar = ch;
     }
-    public int getColumns() {                       // Ê¸»ú¿ô¤ÏÃæ¿È¤ÎÎ¾Â¦¤Ë¾ş¤êÊ¸»úÊ¬¤ò²Ã¤¨¤¿¤â¤Î
+    public int getColumns() {                       // æ–‡å­—æ•°ã¯ä¸­èº«ã®ä¸¡å´ã«é£¾ã‚Šæ–‡å­—åˆ†ã‚’åŠ ãˆãŸã‚‚ã®
         return 1 + display.getColumns() + 1;
     }
-    public int getRows() {                          // ¹Ô¿ô¤ÏÃæ¿È¤Î¹Ô¿ô¤ËÆ±¤¸
+    public int getRows() {                          // è¡Œæ•°ã¯ä¸­èº«ã®è¡Œæ•°ã«åŒã˜
         return display.getRows();
     }
-    public String getRowText(int row) {             // »ØÄê¹Ô¤ÎÆâÍÆ¤Ï¡¢Ãæ¿È¤Î»ØÄê¹Ô¤ÎÎ¾Â¦¤Ë¾ş¤êÊ¸»ú¤ò¤Ä¤±¤¿¤â¤Î
+    public String getRowText(int row) {             // æŒ‡å®šè¡Œã®å†…å®¹ã¯ã€ä¸­èº«ã®æŒ‡å®šè¡Œã®ä¸¡å´ã«é£¾ã‚Šæ–‡å­—ã‚’ã¤ã‘ãŸã‚‚ã®
         return borderChar + display.getRowText(row) + borderChar;
     }
 }

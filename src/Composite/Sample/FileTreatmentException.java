@@ -1,4 +1,4 @@
-public class FileTreatmentException extends RuntimeException {      // RuntimeException¤ÇÀµ¤·¤¤¤«¡©
+public class FileTreatmentException extends RuntimeException {      // RuntimeExceptionã§æ­£ã—ã„ã‹ï¼Ÿ
     public FileTreatmentException() {
     }
     public FileTreatmentException(String msg) {

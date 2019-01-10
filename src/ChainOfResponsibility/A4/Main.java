@@ -6,9 +6,9 @@ public class Main {
         Support diana   = new LimitSupport("Diana", 200);
         Support elmo    = new OddSupport("Elmo");
         Support fred    = new LimitSupport("Fred", 300);
-        // Ï¢º¿¤Î·ÁÀ®
+        // é€£é–ã®å½¢æˆ
         alice.setNext(bob).setNext(charlie).setNext(diana).setNext(elmo).setNext(fred);
-        // ¤µ¤Ş¤¶¤Ş¤Ê¥È¥é¥Ö¥ëÈ¯À¸
+        // ã•ã¾ã–ã¾ãªãƒˆãƒ©ãƒ–ãƒ«ç™ºç”Ÿ
         for (int i = 0; i < 500; i += 33) {
             alice.support(new Trouble(i));
         }

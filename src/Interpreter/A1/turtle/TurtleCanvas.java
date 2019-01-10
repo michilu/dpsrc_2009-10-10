@@ -6,14 +6,14 @@ import language.ExecuteException;
 import java.awt.*;
 
 public class TurtleCanvas extends Canvas implements ExecutorFactory {
-    final static int UNIT_LENGTH = 30;  // Æ°¤¯¤È¤­¤ÎÃ±°ÌÄ¹¤µ
-    final static int DIRECTION_UP = 0; // ¾å¸ş¤­
-    final static int DIRECTION_RIGHT = 3; // ±¦¸ş¤­
-    final static int DIRECTION_DOWN = 6; // ²¼¸ş¤­
-    final static int DIRECTION_LEFT = 9; // º¸¸ş¤­
-    final static int RELATIVE_DIRECTION_RIGHT = 3; // ±¦¤Ë¸ş¤¯
-    final static int RELATIVE_DIRECTION_LEFT = -3; // º¸¤Ë¸ş¤¯
-    final static int RADIUS = 3; // È¾·Â
+    final static int UNIT_LENGTH = 30;  // å‹•ãã¨ãã®å˜ä½é•·ã•
+    final static int DIRECTION_UP = 0; // ä¸Šå‘ã
+    final static int DIRECTION_RIGHT = 3; // å³å‘ã
+    final static int DIRECTION_DOWN = 6; // ä¸‹å‘ã
+    final static int DIRECTION_LEFT = 9; // å·¦å‘ã
+    final static int RELATIVE_DIRECTION_RIGHT = 3; // å³ã«å‘ã
+    final static int RELATIVE_DIRECTION_LEFT = -3; // å·¦ã«å‘ã
+    final static int RADIUS = 3; // åŠå¾„
     private int direction = 0;
     private Point position;
     private Executor executor;

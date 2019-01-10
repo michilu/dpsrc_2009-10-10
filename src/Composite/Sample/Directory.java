@@ -2,15 +2,15 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 public class Directory extends Entry {
-    private String name;                    // ¥Ç¥£¥ì¥¯¥È¥ê¤ÎÌ¾Á°
-    private ArrayList directory = new ArrayList();      // ¥Ç¥£¥ì¥¯¥È¥ê¥¨¥ó¥È¥ê¤Î½¸¹ç
-    public Directory(String name) {         // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    private String name;                    // ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®åå‰
+    private ArrayList directory = new ArrayList();      // ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚¨ãƒ³ãƒˆãƒªã®é›†åˆ
+    public Directory(String name) {         // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
         this.name = name;
     }
-    public String getName() {               // Ì¾Á°¤òÆÀ¤ë
+    public String getName() {               // åå‰ã‚’å¾—ã‚‹
         return name;
     }
-    public int getSize() {                  // ¥µ¥¤¥º¤òÆÀ¤ë
+    public int getSize() {                  // ã‚µã‚¤ã‚ºã‚’å¾—ã‚‹
         int size = 0;
         Iterator it = directory.iterator();
         while (it.hasNext()) {
@@ -19,11 +19,11 @@ public class Directory extends Entry {
         }
         return size;
     }
-    public Entry add(Entry entry) {         // ¥¨¥ó¥È¥ê¤ÎÄÉ²Ã
+    public Entry add(Entry entry) {         // ã‚¨ãƒ³ãƒˆãƒªã®è¿½åŠ 
         directory.add(entry);
         return this;
     }
-    protected void printList(String prefix) {       // ¥¨¥ó¥È¥ê¤Î°ìÍ÷
+    protected void printList(String prefix) {       // ã‚¨ãƒ³ãƒˆãƒªã®ä¸€è¦§
         System.out.println(prefix + "/" + this);
         Iterator it = directory.iterator();
         while (it.hasNext()) {

@@ -1,24 +1,24 @@
-public class StringDisplay extends AbstractDisplay {    // StringDisplay¤â¡¢AbstractDisplay¤Î¥µ¥Ö¥¯¥é¥¹¡£
-    private String string;                              // É½¼¨¤¹¤ë¤Ù¤­Ê¸»úÎó¡£
-    private int width;                                  // ¥Ğ¥¤¥ÈÃ±°Ì¤Ç·×»»¤·¤¿Ê¸»úÎó¤Î¡ÖÉı¡×¡£
-    public StringDisplay(String string) {               // ¥³¥ó¥¹¥È¥é¥¯¥¿¤ÇÅÏ¤µ¤ì¤¿Ê¸»úÎóstring¤ò¡¢
-        this.string = string;                           // ¥Õ¥£¡¼¥ë¥É¤Ëµ­²±¡£
-        this.width = string.getBytes().length;          // ¤½¤ì¤«¤é¥Ğ¥¤¥ÈÃ±°Ì¤ÎÉı¤â¥Õ¥£¡¼¥ë¥É¤Ëµ­²±¤·¤Æ¤ª¤¤¤Æ¡¢¸å¤Ç»È¤¦¡£
+public class StringDisplay extends AbstractDisplay {    // StringDisplayã‚‚ã€AbstractDisplayã®ã‚µãƒ–ã‚¯ãƒ©ã‚¹ã€‚
+    private String string;                              // è¡¨ç¤ºã™ã‚‹ã¹ãæ–‡å­—åˆ—ã€‚
+    private int width;                                  // ãƒã‚¤ãƒˆå˜ä½ã§è¨ˆç®—ã—ãŸæ–‡å­—åˆ—ã®ã€Œå¹…ã€ã€‚
+    public StringDisplay(String string) {               // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§æ¸¡ã•ã‚ŒãŸæ–‡å­—åˆ—stringã‚’ã€
+        this.string = string;                           // ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«è¨˜æ†¶ã€‚
+        this.width = string.getBytes().length;          // ãã‚Œã‹ã‚‰ãƒã‚¤ãƒˆå˜ä½ã®å¹…ã‚‚ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«è¨˜æ†¶ã—ã¦ãŠã„ã¦ã€å¾Œã§ä½¿ã†ã€‚
     }
-    public void open() {                                // ¥ª¡¼¥Ğ¡¼¥é¥¤¥É¤·¤ÆÄêµÁ¤¹¤ëopen¥á¥½¥Ã¥É¡£
-        printLine();                                    // ¤³¤Î¥¯¥é¥¹¤Î¥á¥½¥Ã¥ÉprintLine¤ÇÀş¤ò°ú¤¤¤Æ¤¤¤ë¡£
+    public void open() {                                // ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ã¦å®šç¾©ã™ã‚‹openãƒ¡ã‚½ãƒƒãƒ‰ã€‚
+        printLine();                                    // ã“ã®ã‚¯ãƒ©ã‚¹ã®ãƒ¡ã‚½ãƒƒãƒ‰printLineã§ç·šã‚’å¼•ã„ã¦ã„ã‚‹ã€‚
     }
-    public void print() {                               // print¥á¥½¥Ã¥É¤Ï¡¢
-        System.out.println("|" + string + "|");         // ¥Õ¥£¡¼¥ë¥É¤Ëµ­²±¤·¤Æ¤ª¤¤¤¿Ê¸»úÎó¤ÎÁ°¸å¤Ë"|"¤ò¤Ä¤±¤ÆÉ½¼¨¡£
+    public void print() {                               // printãƒ¡ã‚½ãƒƒãƒ‰ã¯ã€
+        System.out.println("|" + string + "|");         // ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«è¨˜æ†¶ã—ã¦ãŠã„ãŸæ–‡å­—åˆ—ã®å‰å¾Œã«"|"ã‚’ã¤ã‘ã¦è¡¨ç¤ºã€‚
     }
-    public void close() {                               // close¥á¥½¥Ã¥É¤Ï¡¢
-        printLine();                                    // open¤ÈÆ±¤¸¤¯printLine¥á¥½¥Ã¥É¤ÇÀş¤ò°ú¤¤¤Æ¤¤¤ë¡£
+    public void close() {                               // closeãƒ¡ã‚½ãƒƒãƒ‰ã¯ã€
+        printLine();                                    // openã¨åŒã˜ãprintLineãƒ¡ã‚½ãƒƒãƒ‰ã§ç·šã‚’å¼•ã„ã¦ã„ã‚‹ã€‚
     }
-    private void printLine() {                          // open¤Èclose¤«¤é¸Æ¤Ğ¤ì¤ëprintLine¥á¥½¥Ã¥É¤À¡£private¤Ê¤Î¤Ç¡¢¤³¤Î¥¯¥é¥¹¤ÎÃæ¤À¤±¤Ç»È¤ï¤ì¤ë¡£
-        System.out.print("+");                          // ÏÈ¤Î³Ñ¤òÉ½¸½¤¹¤ë"+"¥Ş¡¼¥¯¤òÉ½¼¨¡£
-        for (int i = 0; i < width; i++) {               // width¸Ä¤Î"-"¤òÉ½¼¨¤·¤Æ¡¢
-            System.out.print("-");                      // ÏÈÀş¤È¤·¤ÆÍÑ¤¤¤ë¡£
+    private void printLine() {                          // openã¨closeã‹ã‚‰å‘¼ã°ã‚Œã‚‹printLineãƒ¡ã‚½ãƒƒãƒ‰ã ã€‚privateãªã®ã§ã€ã“ã®ã‚¯ãƒ©ã‚¹ã®ä¸­ã ã‘ã§ä½¿ã‚ã‚Œã‚‹ã€‚
+        System.out.print("+");                          // æ ã®è§’ã‚’è¡¨ç¾ã™ã‚‹"+"ãƒãƒ¼ã‚¯ã‚’è¡¨ç¤ºã€‚
+        for (int i = 0; i < width; i++) {               // widthå€‹ã®"-"ã‚’è¡¨ç¤ºã—ã¦ã€
+            System.out.print("-");                      // æ ç·šã¨ã—ã¦ç”¨ã„ã‚‹ã€‚
         }
-        System.out.println("+");                        // ÏÈ¤Î³Ñ¤òÉ½¸½¤¹¤ë"+"¥Ş¡¼¥¯¤òÉ½¼¨¡£
+        System.out.println("+");                        // æ ã®è§’ã‚’è¡¨ç¾ã™ã‚‹"+"ãƒãƒ¼ã‚¯ã‚’è¡¨ç¤ºã€‚
     }
 }

@@ -10,61 +10,61 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class SafeFrame extends Frame implements ActionListener, Context {
-    private TextField textClock = new TextField(60);        // ¸½ºß»ş¹ïÉ½¼¨
-    private TextArea textScreen = new TextArea(10, 60);     // ·ÙÈ÷¥»¥ó¥¿¡¼½ĞÎÏ
-    private Button buttonUse = new Button("¶â¸Ë»ÈÍÑ");      // ¶â¸Ë»ÈÍÑ¥Ü¥¿¥ó
-    private Button buttonAlarm = new Button("Èó¾ï¥Ù¥ë");    // Èó¾ï¥Ù¥ë¥Ü¥¿¥ó
-    private Button buttonPhone = new Button("ÄÌ¾ïÄÌÏÃ");    // ÄÌ¾ïÄÌÏÃ¥Ü¥¿¥ó
-    private Button buttonExit = new Button("½ªÎ»");         // ½ªÎ»¥Ü¥¿¥ó
+    private TextField textClock = new TextField(60);        // ç¾åœ¨æ™‚åˆ»è¡¨ç¤º
+    private TextArea textScreen = new TextArea(10, 60);     // è­¦å‚™ã‚»ãƒ³ã‚¿ãƒ¼å‡ºåŠ›
+    private Button buttonUse = new Button("é‡‘åº«ä½¿ç”¨");      // é‡‘åº«ä½¿ç”¨ãƒœã‚¿ãƒ³
+    private Button buttonAlarm = new Button("éå¸¸ãƒ™ãƒ«");    // éå¸¸ãƒ™ãƒ«ãƒœã‚¿ãƒ³
+    private Button buttonPhone = new Button("é€šå¸¸é€šè©±");    // é€šå¸¸é€šè©±ãƒœã‚¿ãƒ³
+    private Button buttonExit = new Button("çµ‚äº†");         // çµ‚äº†ãƒœã‚¿ãƒ³
 
-    private State state = DayState.getInstance();           // ¸½ºß¤Î¾õÂÖ
+    private State state = DayState.getInstance();           // ç¾åœ¨ã®çŠ¶æ…‹
 
-    // ¥³¥ó¥¹¥È¥é¥¯¥¿
+    // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
     public SafeFrame(String title) {
         super(title);
         setBackground(Color.lightGray);
         setLayout(new BorderLayout());
-        // textClock¤òÇÛÃÖ
+        // textClockã‚’é…ç½®
         add(textClock, BorderLayout.NORTH);
         textClock.setEditable(false);
-        // textScreen¤òÇÛÃÖ
+        // textScreenã‚’é…ç½®
         add(textScreen, BorderLayout.CENTER);
         textScreen.setEditable(false);
-        // ¥Ñ¥Í¥ë¤Ë¥Ü¥¿¥ó¤ò³ÊÇ¼
+        // ãƒ‘ãƒãƒ«ã«ãƒœã‚¿ãƒ³ã‚’æ ¼ç´
         Panel panel = new Panel();
         panel.add(buttonUse);
         panel.add(buttonAlarm);
         panel.add(buttonPhone);
         panel.add(buttonExit);
-        // ¤½¤Î¥Ñ¥Í¥ë¤òÇÛÃÖ
+        // ãã®ãƒ‘ãƒãƒ«ã‚’é…ç½®
         add(panel, BorderLayout.SOUTH);
-        // É½¼¨
+        // è¡¨ç¤º
         pack();
         show();
-        // ¥ê¥¹¥Ê¡¼¤ÎÀßÄê
+        // ãƒªã‚¹ãƒŠãƒ¼ã®è¨­å®š
         buttonUse.addActionListener(this);
         buttonAlarm.addActionListener(this);
         buttonPhone.addActionListener(this);
         buttonExit.addActionListener(this);
     }
-    // ¥Ü¥¿¥ó¤¬²¡¤µ¤ì¤¿¤é¤³¤³¤ËÍè¤ë
+    // ãƒœã‚¿ãƒ³ãŒæŠ¼ã•ã‚ŒãŸã‚‰ã“ã“ã«æ¥ã‚‹
     public void actionPerformed(ActionEvent e) {
         System.out.println(e.toString());
-        if (e.getSource() == buttonUse) {           // ¶â¸Ë»ÈÍÑ¥Ü¥¿¥ó
+        if (e.getSource() == buttonUse) {           // é‡‘åº«ä½¿ç”¨ãƒœã‚¿ãƒ³
             state.doUse(this);
-        } else if (e.getSource() == buttonAlarm) {  // Èó¾ï¥Ù¥ë¥Ü¥¿¥ó
+        } else if (e.getSource() == buttonAlarm) {  // éå¸¸ãƒ™ãƒ«ãƒœã‚¿ãƒ³
             state.doAlarm(this);
-        } else if (e.getSource() == buttonPhone) {  // ÄÌ¾ïÄÌÏÃ¥Ü¥¿¥ó
+        } else if (e.getSource() == buttonPhone) {  // é€šå¸¸é€šè©±ãƒœã‚¿ãƒ³
             state.doPhone(this);
-        } else if (e.getSource() == buttonExit) {   // ½ªÎ»¥Ü¥¿¥ó
+        } else if (e.getSource() == buttonExit) {   // çµ‚äº†ãƒœã‚¿ãƒ³
             System.exit(0);
         } else {
             System.out.println("?");
         }
     }
-    // »ş¹ï¤ÎÀßÄê
+    // æ™‚åˆ»ã®è¨­å®š
     public void setClock(int hour) {
-        String clockstring = "¸½ºß»ş¹ï¤Ï";
+        String clockstring = "ç¾åœ¨æ™‚åˆ»ã¯";
         if (hour < 10) {
             clockstring += "0" + hour + ":00";
         } else {
@@ -74,16 +74,16 @@ public class SafeFrame extends Frame implements ActionListener, Context {
         textClock.setText(clockstring);
         state.doClock(this, hour);
     }
-    // ¾õÂÖÊÑ²½
+    // çŠ¶æ…‹å¤‰åŒ–
     public void changeState(State state) {
-        System.out.println(this.state + "¤«¤é" + state + "¤Ø¾õÂÖ¤¬ÊÑ²½¤·¤Ş¤·¤¿¡£");
+        System.out.println(this.state + "ã‹ã‚‰" + state + "ã¸çŠ¶æ…‹ãŒå¤‰åŒ–ã—ã¾ã—ãŸã€‚");
         this.state = state;
     }
-    // ·ÙÈ÷¥»¥ó¥¿¡¼·ÙÈ÷°÷¸Æ¤Ó½Ğ¤·
+    // è­¦å‚™ã‚»ãƒ³ã‚¿ãƒ¼è­¦å‚™å“¡å‘¼ã³å‡ºã—
     public void callSecurityCenter(String msg) {
         textScreen.append("call! " + msg + "\n");
     }
-    // ·ÙÈ÷¥»¥ó¥¿¡¼µ­Ï¿
+    // è­¦å‚™ã‚»ãƒ³ã‚¿ãƒ¼è¨˜éŒ²
     public void recordLog(String msg) {
         textScreen.append("record ... " + msg + "\n");
     }

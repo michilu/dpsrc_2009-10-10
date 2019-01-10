@@ -1,14 +1,14 @@
 public abstract class Support {
-    private String name;                    // ¤³¤Î¥È¥é¥Ö¥ë²ò·è¼Ô¤ÎÌ¾Á°
-    private Support next;                 // ¤¿¤é¤¤²ó¤·¤ÎÀè
-    public Support(String name) {           // ¥È¥é¥Ö¥ë²ò·è¼Ô¤ÎÀ¸À®
+    private String name;                    // ã“ã®ãƒˆãƒ©ãƒ–ãƒ«è§£æ±ºè€…ã®åå‰
+    private Support next;                 // ãŸã‚‰ã„å›ã—ã®å…ˆ
+    public Support(String name) {           // ãƒˆãƒ©ãƒ–ãƒ«è§£æ±ºè€…ã®ç”Ÿæˆ
         this.name = name;
     }
-    public Support setNext(Support next) {  // ¤¿¤é¤¤²ó¤·¤ÎÀè¤òÀßÄê
+    public Support setNext(Support next) {  // ãŸã‚‰ã„å›ã—ã®å…ˆã‚’è¨­å®š
         this.next = next;
         return next;
     }
-    public void support(Trouble trouble) {          // ¢¨¤³¤Î¥á¥½¥Ã¥ÉÌÖ³İ¤±
+    public void support(Trouble trouble) {          // â€»ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ç¶²æ›ã‘
         for (Support obj = this; true; obj = obj.next) {
             if (obj.resolve(trouble)) {
                 obj.done(trouble);
@@ -19,14 +19,14 @@ public abstract class Support {
             }
         }
     }
-    public String toString() {              // Ê¸»úÎóÉ½¸½
+    public String toString() {              // æ–‡å­—åˆ—è¡¨ç¾
         return "[" + name + "]";
     }
-    protected abstract boolean resolve(Trouble trouble); // ²ò·èÍÑ¥á¥½¥Ã¥É
-    protected void done(Trouble trouble) {  // ²ò·è
+    protected abstract boolean resolve(Trouble trouble); // è§£æ±ºç”¨ãƒ¡ã‚½ãƒƒãƒ‰
+    protected void done(Trouble trouble) {  // è§£æ±º
         System.out.println(trouble + " is resolved by " + this + ".");
     }
-    protected void fail(Trouble trouble) {  // Ì¤²ò·è
+    protected void fail(Trouble trouble) {  // æœªè§£æ±º
         System.out.println(trouble + " cannot be resolved.");
     }
 }

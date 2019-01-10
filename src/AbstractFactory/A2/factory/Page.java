@@ -19,7 +19,7 @@ public abstract class Page {
             Writer writer = new FileWriter(filename);
             writer.write(this.makeHTML());
             writer.close();
-            System.out.println(filename + " ¤òºîÀ®¤·¤Ş¤·¤¿¡£");
+            System.out.println(filename + " ã‚’ä½œæˆã—ã¾ã—ãŸã€‚");
         } catch (IOException e) {
             e.printStackTrace();
         }

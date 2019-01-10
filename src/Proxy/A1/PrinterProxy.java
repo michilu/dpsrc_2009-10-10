@@ -1,31 +1,31 @@
 public class PrinterProxy implements Printable {
-    private String name;            // Ì¾Á°
-    private Printable real;         // ¡ÖËÜ¿Í¡×                 
-    private String className;       // ¡ÖËÜ¿Í¡×¤Î¥¯¥é¥¹Ì¾       
-    public PrinterProxy(String name, String className) {      // ¥³¥ó¥¹¥È¥é¥¯¥¿     
+    private String name;            // åå‰
+    private Printable real;         // ã€Œæœ¬äººã€                 
+    private String className;       // ã€Œæœ¬äººã€ã®ã‚¯ãƒ©ã‚¹å       
+    public PrinterProxy(String name, String className) {      // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿     
         this.name = name;
         this.className = className;                                                 
     }
-    public synchronized void setPrinterName(String name) {  // Ì¾Á°¤ÎÀßÄê
+    public synchronized void setPrinterName(String name) {  // åå‰ã®è¨­å®š
         if (real != null) {
-            real.setPrinterName(name);  // ¡ÖËÜ¿Í¡×¤Ë¤âÀßÄê¤¹¤ë
+            real.setPrinterName(name);  // ã€Œæœ¬äººã€ã«ã‚‚è¨­å®šã™ã‚‹
         }
         this.name = name;
     }
-    public String getPrinterName() {    // Ì¾Á°¤Î¼èÆÀ
+    public String getPrinterName() {    // åå‰ã®å–å¾—
         return name;
     }
-    public void print(String string) {  // É½¼¨
+    public void print(String string) {  // è¡¨ç¤º
         realize();
         real.print(string);
     }
-    private synchronized void realize() {   // ¡ÖËÜ¿Í¡×¤òÀ¸À®
+    private synchronized void realize() {   // ã€Œæœ¬äººã€ã‚’ç”Ÿæˆ
         if (real == null) {
             try {                                                                       
                 real = (Printable)Class.forName(className).newInstance();               
                 real.setPrinterName(name);                                              
             } catch (ClassNotFoundException e) {                                        
-                System.err.println("¥¯¥é¥¹ " + className + " ¤¬¸«¤Ä¤«¤ê¤Ş¤»¤ó¡£");      
+                System.err.println("ã‚¯ãƒ©ã‚¹ " + className + " ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚");      
             } catch (Exception e) {                                                     
                 e.printStackTrace();                                                    
             }                                                                           

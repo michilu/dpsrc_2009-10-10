@@ -12,7 +12,7 @@ public class Main {
                             new FullBorder(
                                 new SideBorder(
                                     new FullBorder(
-                                        new StringDisplay("§≥§Û§À§¡§œ°£")
+                                        new StringDisplay("„Åì„Çì„Å´„Å°„ÅØ„ÄÇ")
                                     ),
                                     '*'
                                 )

@@ -1,15 +1,15 @@
 import java.util.Iterator;
 
 public abstract class Entry implements Element {
-    public abstract String getName();                                   // Ì¾Á°¤òÆÀ¤ë
-    public abstract int getSize();                                      // ¥µ¥¤¥º¤òÆÀ¤ë
-    public Entry add(Entry entry) throws FileTreatmentException {       // ¥¨¥ó¥È¥ê¤òÄÉ²Ã¤¹¤ë
+    public abstract String getName();                                   // åå‰ã‚’å¾—ã‚‹
+    public abstract int getSize();                                      // ã‚µã‚¤ã‚ºã‚’å¾—ã‚‹
+    public Entry add(Entry entry) throws FileTreatmentException {       // ã‚¨ãƒ³ãƒˆãƒªã‚’è¿½åŠ ã™ã‚‹
         throw new FileTreatmentException();
     }
-    public Iterator iterator() throws FileTreatmentException {    // Iterator¤ÎÀ¸À®
+    public Iterator iterator() throws FileTreatmentException {    // Iteratorã®ç”Ÿæˆ
         throw new FileTreatmentException();
     }
-    public String toString() {                                          // Ê¸»úÎóÉ½¸½
+    public String toString() {                                          // æ–‡å­—åˆ—è¡¨ç¾
         return getName() + " (" + getSize() + ")";
     }
 }

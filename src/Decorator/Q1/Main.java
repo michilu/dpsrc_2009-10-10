@@ -12,7 +12,7 @@ public class Main {
                             new SideBorder(
                                 new UpDownBorder(
                                     new SideBorder(
-                                        new StringDisplay("§≥§Û§À§¡§œ°£"),
+                                        new StringDisplay("„Åì„Çì„Å´„Å°„ÅØ„ÄÇ"),
                                         '*'
                                     ),
                                     '='

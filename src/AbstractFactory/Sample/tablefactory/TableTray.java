@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class TableTray extends Tray {
     public TableTray(String caption) {
-        super(caption);                     // super(...)§»§§§¶…Ωµ≠À°
+        super(caption);                     // super(...)„Å®„ÅÑ„ÅÜË°®Ë®òÊ≥ï
     }
     public String makeHTML() {
         StringBuffer buffer = new StringBuffer();

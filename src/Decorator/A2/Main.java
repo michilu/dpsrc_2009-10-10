@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
         MultiStringDisplay md = new MultiStringDisplay();
-        md.add("¤ª¤Ï¤è¤¦¤´¤¶¤¤¤Ş¤¹¡£");
-        md.add("¤³¤ó¤Ë¤Á¤Ï¡£");
-        md.add("¤ª¤ä¤¹¤ß¤Ê¤µ¤¤¡¢¤Ş¤¿ÌÀÆü¡£");
+        md.add("ãŠã¯ã‚ˆã†ã”ã–ã„ã¾ã™ã€‚");
+        md.add("ã“ã‚“ã«ã¡ã¯ã€‚");
+        md.add("ãŠã‚„ã™ã¿ãªã•ã„ã€ã¾ãŸæ˜æ—¥ã€‚");
         md.show();
 
         Display d1 = new SideBorder(md, '#');

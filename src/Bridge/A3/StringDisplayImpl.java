@@ -1,24 +1,24 @@
 public class StringDisplayImpl extends DisplayImpl {
-    private String string;                              // É½¼¨¤¹¤ë¤Ù¤­Ê¸»úÎó
-    private int width;                                  // ¥Ğ¥¤¥ÈÃ±°Ì¤Ç·×»»¤·¤¿Ê¸»úÎó¤Î¡ÖÉı¡×
-    public StringDisplayImpl(String string) {           //¥³¥ó¥¹¥È¥é¥¯¥¿¤ÇÅÏ¤µ¤ì¤¿Ê¸»úÎóstring¤ò¡¢
-        this.string = string;                               //¥Õ¥£¡¼¥ë¥É¤Ëµ­²±¤·¤Æ¤ª¤¯¡£
-        this.width = string.getBytes().length;              //¤½¤ì¤«¤é¥Ğ¥¤¥ÈÃ±°Ì¤ÎÉı¤â¥Õ¥£¡¼¥ë¥É¤Ëµ­²±¤·¤Æ¤ª¤¤¤Æ¡¢¸å¤Ç»È¤¦¡£
+    private String string;                              // è¡¨ç¤ºã™ã‚‹ã¹ãæ–‡å­—åˆ—
+    private int width;                                  // ãƒã‚¤ãƒˆå˜ä½ã§è¨ˆç®—ã—ãŸæ–‡å­—åˆ—ã®ã€Œå¹…ã€
+    public StringDisplayImpl(String string) {           //ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§æ¸¡ã•ã‚ŒãŸæ–‡å­—åˆ—stringã‚’ã€
+        this.string = string;                               //ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«è¨˜æ†¶ã—ã¦ãŠãã€‚
+        this.width = string.getBytes().length;              //ãã‚Œã‹ã‚‰ãƒã‚¤ãƒˆå˜ä½ã®å¹…ã‚‚ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«è¨˜æ†¶ã—ã¦ãŠã„ã¦ã€å¾Œã§ä½¿ã†ã€‚
     }
     public void rawOpen() {
         printLine();
     }
     public void rawPrint() {
-        System.out.println("|" + string + "|");         // Á°¸å¤Ë"|"¤ò¤Ä¤±¤ÆÉ½¼¨
+        System.out.println("|" + string + "|");         // å‰å¾Œã«"|"ã‚’ã¤ã‘ã¦è¡¨ç¤º
     }
     public void rawClose() {
         printLine();
     }
     private void printLine() {
-        System.out.print("+");                          // ÏÈ¤Î³Ñ¤òÉ½¸½¤¹¤ë"+"¥Ş¡¼¥¯¤òÉ½¼¨¤¹¤ë¡£
-        for (int i = 0; i < width; i++) {               // width¸Ä¤Î"-"¤òÉ½¼¨¤·¤Æ¡¢
-            System.out.print("-");                      // ÏÈÀş¤È¤·¤ÆÍÑ¤¤¤ë¡£
+        System.out.print("+");                          // æ ã®è§’ã‚’è¡¨ç¾ã™ã‚‹"+"ãƒãƒ¼ã‚¯ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
+        for (int i = 0; i < width; i++) {               // widthå€‹ã®"-"ã‚’è¡¨ç¤ºã—ã¦ã€
+            System.out.print("-");                      // æ ç·šã¨ã—ã¦ç”¨ã„ã‚‹ã€‚
         }
-        System.out.println("+");                        // ÏÈ¤Î³Ñ¤òÉ½¸½¤¹¤ë"+"¥Ş¡¼¥¯¤òÉ½¼¨¤¹¤ë¡£
+        System.out.println("+");                        // æ ã®è§’ã‚’è¡¨ç¾ã™ã‚‹"+"ãƒãƒ¼ã‚¯ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
     }
 }

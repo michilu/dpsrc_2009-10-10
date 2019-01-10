@@ -4,11 +4,11 @@ import framework.*;
 public class IDCard extends Product {
     private String owner;
     IDCard(String owner) {
-        System.out.println(owner + "¤Î¥«¡¼¥É¤òºî¤ê¤Ş¤¹¡£");
+        System.out.println(owner + "ã®ã‚«ãƒ¼ãƒ‰ã‚’ä½œã‚Šã¾ã™ã€‚");
         this.owner = owner;
     }
     public void use() {
-        System.out.println(owner + "¤Î¥«¡¼¥É¤ò»È¤¤¤Ş¤¹¡£");
+        System.out.println(owner + "ã®ã‚«ãƒ¼ãƒ‰ã‚’ä½¿ã„ã¾ã™ã€‚");
     }
     public String getOwner() {
         return owner;

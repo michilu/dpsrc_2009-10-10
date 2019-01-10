@@ -1,24 +1,24 @@
 public class TextBuilder extends Builder {
-    private String buffer = "";                                 // ¤³¤Î¥Õ¥£¡¼¥ë¥É¤ËÊ¸½ñ¤ò¹½ÃÛ¤·¤Æ¤¤¤¯
-    public void makeTitle(String title) {                       // ¥×¥ì¡¼¥ó¥Æ¥­¥¹¥È¤Ç¤Î¥¿¥¤¥È¥ë
-        buffer += "==============================\n";               // ¾ş¤êÀş
-        buffer += "¡Ø" + title + "¡Ù\n";                            // ¡Ø¡Ù¤Ä¤­¤Î¥¿¥¤¥È¥ë
-        buffer += "\n";                                             // ¶õ¹Ô
+    private String buffer = "";                                 // ã“ã®ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«æ–‡æ›¸ã‚’æ§‹ç¯‰ã—ã¦ã„ã
+    public void makeTitle(String title) {                       // ãƒ—ãƒ¬ãƒ¼ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã§ã®ã‚¿ã‚¤ãƒˆãƒ«
+        buffer += "==============================\n";               // é£¾ã‚Šç·š
+        buffer += "ã€" + title + "ã€\n";                            // ã€ã€ã¤ãã®ã‚¿ã‚¤ãƒˆãƒ«
+        buffer += "\n";                                             // ç©ºè¡Œ
     }
-    public void makeString(String str) {                        // ¥×¥ì¡¼¥ó¥Æ¥­¥¹¥È¤Ç¤ÎÊ¸»úÎó
-        buffer += '¢£' + str + "\n";                                // ¢£¤Ä¤­¤ÎÊ¸»úÎó
-        buffer += "\n";                                             // ¶õ¹Ô
+    public void makeString(String str) {                        // ãƒ—ãƒ¬ãƒ¼ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã§ã®æ–‡å­—åˆ—
+        buffer += 'â– ' + str + "\n";                                // â– ã¤ãã®æ–‡å­—åˆ—
+        buffer += "\n";                                             // ç©ºè¡Œ
     }
-    public void makeItems(String[] items) {                     // ¥×¥ì¡¼¥ó¥Æ¥­¥¹¥È¤Ç¤Î²Õ¾ò½ñ¤­
+    public void makeItems(String[] items) {                     // ãƒ—ãƒ¬ãƒ¼ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã§ã®ç®‡æ¡æ›¸ã
         for (int i = 0; i < items.length; i++) {
-            buffer += "¡¡¡¦" + items[i] + "\n";                     // ¡¦¤Ä¤­¤Î¹àÌÜ
+            buffer += "ã€€ãƒ»" + items[i] + "\n";                     // ãƒ»ã¤ãã®é …ç›®
         }
-        buffer += "\n";                                             // ¶õ¹Ô
+        buffer += "\n";                                             // ç©ºè¡Œ
     }
-    public void close() {                                       // Ê¸½ñ¤Î´°À®
-        buffer += "==============================\n";               // ¾ş¤êÀş
+    public void close() {                                       // æ–‡æ›¸ã®å®Œæˆ
+        buffer += "==============================\n";               // é£¾ã‚Šç·š
     }
-    public String getResult() {                                 // ´°À®¤·¤¿Ê¸½ñ
+    public String getResult() {                                 // å®Œæˆã—ãŸæ–‡æ›¸
         return buffer;
     }
 }

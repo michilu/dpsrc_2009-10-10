@@ -3,19 +3,19 @@ import java.io.*;
 import java.util.*;
 
 public class Memento implements Serializable {  
-    int money;                              // ½ê»ı¶â
-    ArrayList fruits;                          // ¥Õ¥ë¡¼¥Ä
-    public int getMoney() {                 // ½ê»ı¶â¤òÆÀ¤ë(narrow interface)
+    int money;                              // æ‰€æŒé‡‘
+    ArrayList fruits;                          // ãƒ•ãƒ«ãƒ¼ãƒ„
+    public int getMoney() {                 // æ‰€æŒé‡‘ã‚’å¾—ã‚‹(narrow interface)
         return money;
     }
-    Memento(int money) {                    // ¥³¥ó¥¹¥È¥é¥¯¥¿(wide interface)
+    Memento(int money) {                    // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(wide interface)
         this.money = money;
         this.fruits = new ArrayList();
     }
-    void addFruit(String fruit) {           // ¥Õ¥ë¡¼¥Ä¤òÄÉ²Ã¤¹¤ë(wide interface)
+    void addFruit(String fruit) {           // ãƒ•ãƒ«ãƒ¼ãƒ„ã‚’è¿½åŠ ã™ã‚‹(wide interface)
         fruits.add(fruit);
     }
-    List getFruits() {                    // ¥Õ¥ë¡¼¥Ä¤òÆÀ¤ë(wide interface)
+    List getFruits() {                    // ãƒ•ãƒ«ãƒ¼ãƒ„ã‚’å¾—ã‚‹(wide interface)
          return (List)fruits.clone();
     }
 }

@@ -1,23 +1,23 @@
 public class UpDownBorder extends Border {
-    private char borderChar;                        // ¾ş¤ê¤È¤Ê¤ëÊ¸»ú
-    public UpDownBorder(Display display, char ch) {   // ¥³¥ó¥¹¥È¥é¥¯¥¿¤ÇDisplay¤È¾ş¤êÊ¸»ú¤ò»ØÄê
+    private char borderChar;                        // é£¾ã‚Šã¨ãªã‚‹æ–‡å­—
+    public UpDownBorder(Display display, char ch) {   // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§Displayã¨é£¾ã‚Šæ–‡å­—ã‚’æŒ‡å®š
         super(display);
         this.borderChar = ch;
     }
-    public int getColumns() {                       // Ê¸»ú¿ô¤ÏÃæ¿È¤ÎÊ¸»ú¿ô¤ËÆ±¤¸
+    public int getColumns() {                       // æ–‡å­—æ•°ã¯ä¸­èº«ã®æ–‡å­—æ•°ã«åŒã˜
         return display.getColumns();
     }
-    public int getRows() {                          // ¹Ô¿ô¤ÏÃæ¿È¤Î¾å²¼¤Ë¾ş¤êÊ¸»úÊ¬¤ò²Ã¤¨¤¿¤â¤Î
+    public int getRows() {                          // è¡Œæ•°ã¯ä¸­èº«ã®ä¸Šä¸‹ã«é£¾ã‚Šæ–‡å­—åˆ†ã‚’åŠ ãˆãŸã‚‚ã®
         return 1 + display.getRows() + 1;
     }
-    public String getRowText(int row) {             // »ØÄê¹Ô¤ÎÆâÍÆ
+    public String getRowText(int row) {             // æŒ‡å®šè¡Œã®å†…å®¹
         if (row == 0 || row == getRows() - 1) {
             return makeLine(borderChar, getColumns());
         } else {
             return display.getRowText(row - 1);
         }
     }
-    private String makeLine(char ch, int count) { // Ê¸»úch¤òcount¸ÄÏ¢Â³¤µ¤»¤¿Ê¸»úÎó¤òºî¤ë
+    private String makeLine(char ch, int count) { // æ–‡å­—chã‚’countå€‹é€£ç¶šã•ã›ãŸæ–‡å­—åˆ—ã‚’ä½œã‚‹
         StringBuffer buf = new StringBuffer();
         for (int i = 0; i < count; i++) {
             buf.append(ch);
